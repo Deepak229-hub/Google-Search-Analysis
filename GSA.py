@@ -7,7 +7,7 @@ from PIL import Image
 import random
 
 st.title("Google Search Analysis 📈")
-st.caption("This application is designed to get insights of a trend in past 5 years. You'll get to know the interest by sub-region and the rate of the interest over time.")
+st.caption("This application is designed to get insights of a trend. You'll get to know the interest by sub-region and the rate of the interest over time.")
 st.markdown("---")
 key = st.text_input("Enter a keyword: ")
 
@@ -16,7 +16,7 @@ pytrends = TrendReq(hl="en-US", tz=360)
 
 def fetch_trends(keyword):
     try:
-        pytrends.build_payload([keyword], geo="IN", timeframe="today 5-y")
+        pytrends.build_payload([keyword], geo="IN", timeframe="today 1-m")
 
         
         time.sleep(5)  
