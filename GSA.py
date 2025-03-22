@@ -19,7 +19,7 @@ def fetch_trends(keyword):
         pytrends.build_payload([keyword], geo="IN", timeframe="today 5-y")
 
         
-        time.sleep(120)  
+        time.sleep(5)  
 
         df = pytrends.interest_by_region().head(10)
         df1 = pytrends.interest_over_time().head(10)
